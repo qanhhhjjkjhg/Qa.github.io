@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Truyền Thông THPT Tân Lược</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>BAN TRUYỀN THÔNG TRƯỜNG THPT TÂN LƯỢC</h1>
+    <p>KẾT NỐI – LAN TỎA – SÁNG TẠO</p>
+    <p>THÀNH LẬP 21/09/2024</p>
+</header>
+
+<nav>
+    <a href="#gioithieu">Giới thiệu</a>
+    <a href="#tintuc">Tin tức</a>
+    <a href="#hinhanh">Hình ảnh</a>
+    <a href="clb.html">CLB</a>
+    <a href="hoithi.html">Hội thi</a>
+    <a href="tuyenthanhvien.html">Tuyển thành viên</a>
+    <a href="tacnghiep.html">Tác nghiệp</a>
+    <a href="#lienhe">Liên hệ</a>
+</nav>
+
+<div class="container">
+
+    <div class="section" id="gioithieu">
+        <h2>Giới thiệu</h2>
+        <p>
+            Ban Truyền thông trường THPT Tân Lược là đơn vị phụ trách ghi nhận,
+            xây dựng nội dung và lan tỏa các hoạt động học tập – phong trào – sự kiện
+            của nhà trường đến học sinh, giáo viên và cộng đồng.
+        </p>
+    </div>
+
+    <div class="section" id="tintuc">
+        <h2>Tin tức nổi bật</h2>
+
+        <div class="post">
+            <h3> Tech – Media Challenges 2025</h3>
+            <p>
+                Cuộc thi sáng tạo công nghệ kết hợp truyền thông đã thu hút sự tham gia
+                sôi nổi của các câu lạc bộ và học sinh toàn trường.
+            </p>
+        </div>
+
+        <div class="post">
+            <h3> Hoạt động CLB Lập trình Tân Lược</h3>
+            <p>
+                CLB triển khai các dự án lập trình, robot và sản phẩm công nghệ thực tế.
+            </p>
+        </div>
+    </div>
+
+    <div class="section" id="hinhanh">
+    <h2>Thư viện hình ảnh</h2>
+
+    <p style="margin-bottom:10px;color:#555;">
+        Chọn danh mục để xem hình ảnh hoạt động
+    </p>
+
+    <select id="album" onchange="doiAlbum()">
+        <option value="chung">Hoạt động chung</option>
+        <option value="clb">Câu lạc bộ</option>
+        <option value="hoithi">Hội thi</option>
+    </select>
+
+    <div id="chung" class="gallery album">
+        <img src="images/chung1.jpg" alt="Hoạt động chung 1">
+        <img src="images/chung2.jpg" alt="Hoạt động chung 2">
+    </div>
+
+    <div id="clb" class="gallery album" style="display:none">
+        <img src="images/techmedia1.jpg" alt="CLB Lập trình">
+        <img src="images/vannghe1.jpg" alt="CLB Văn nghệ">
+    </div>
+
+    <div id="hoithi" class="gallery album" style="display:none">
+        <img src="images/thethao2.jpg" alt="Tech Media">
+        <img src="images/hoitrai1.jpg" alt="Hội trại">
+    </div>
+</div>
+
+    <div class="section" id="lienhe">
+        <h2>Liên hệ</h2>
+        <p> Trường THPT Tân Lược</p>
+        <p> P. Chủ nhiệm CLB: 0969809970 (Th. Công)</p>
+        <p> Email: truyenthong@thpttanluoc.edu.vn</p>
+        <p> Fanpage:
+            <a href="https://www.facebook.com/share/1CfEBpqGtY/?mibextid=wwXIfr" target="_blank">
+                Ban Truyền Thông THPT Tân Lược
+            </a>
+        </p>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2025 Ban Truyền Thông – Trường THPT Tân Lược</p>
+</footer>
+<script>
+function doiAlbum(){
+    document.querySelectorAll(".album").forEach(a => a.style.display = "none");
+    document.getElementById(
+        document.getElementById("album").value
+    ).style.display = "grid";
+}
+</script>
+
+</body>
+</html>
